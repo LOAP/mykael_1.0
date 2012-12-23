@@ -1,0 +1,34 @@
+<h2>Find Friends</h2>
+<strong><p><%= link_to "Back", :back %></p></strong>
+<br />
+<br />
+<% for user in @users %>
+    <div class="hive_thumbnail_container">
+      <div class="hive_thumb_map">
+        <% if user.profile.image? %>
+            <%= image_tag user.profile.image_url.to_s %>
+        <% else %>
+            <div class="profile_thumbnail_no_image" style="text-align: center;">
+              <strong>No image for <%= user.name.capitalize %></strong>
+            </div>
+        <% end %>
+      </div>
+      <div class="hive_thumb_name">
+        <strong><%= user.name %></strong> <span style="font-size: 10px;"><%= link_to "Request Friendship", friendships_path(:friend_id => user), :method => :post %></span>
+      </div>
+      <div class="profile_thumb_bio">
+        <%= truncate(user.bio.content, :length => 100) %> <br />
+      </div>
+      <div class="hive_thumb_info_link">
+        <h5 style="color: orange;"><%= link_to 'View Full Profile', user.profile %></h5>
+      </div>
+    </div>
+<% end %>
+</div>
+
+
+
+
+
+
+

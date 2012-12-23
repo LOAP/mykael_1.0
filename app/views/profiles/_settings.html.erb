@@ -1,0 +1,33 @@
+<div class="dashboard_home_settings_container">
+  <div class="dashboard_home_settings_container_rt_column">
+    <div class="dashboard_home_account_settings">
+      <% if can? :update, @profile %>
+      <%= link_to 'Edit Biography', @user.bio %>
+      <% else %>
+          <%= link_to 'My Biography', @user.bio %>
+      <% end %>
+    </div>
+    <div class="dashboard_home_settings_view_profile">
+      <%= link_to 'Add Content', @profile %>
+    </div>
+    <% if can? :update, @profile %>
+    <div class="dashboard_home_settings_private">
+      <p style="color:orange;padding-left:0px;font-size:12px"><%= check_box_tag 'checkbox_name', 'selected' %><strong>Make Profile Private</strong></p>
+    </div>
+    <% end %>
+  </div>
+  <div class = "dashboard_home_settings_container_lt_column">
+    <div class= "dashboard_home_created_by">
+      <span style="color:black;padding-left:12px;font-size:20px"><strong> <%= @user.name.upcase %></strong></span>
+    </div>
+    <div class= "dashboard_home_created_on">
+      <span style="color:black;padding-left:12px;font-size:12px"><strong>Created On: <%= @profile.created_at.strftime("%b. %d, %Y") %></strong></span>
+    </div>
+    <div class= "dashboard_home_location_ip">
+      <span style="color:black;padding-left:12px;font-size:12px"><strong>Location: <%= @profile.user.current_sign_in_ip %></strong></span>
+    </div>
+    <div class= "dashboard_home_bio_truncate">
+      <span style="color:gray;padding-left:12px;font-size:15px"><strong><%= truncate(@user.bio.content, :length => 200) %></strong> <%= link_to 'full Bio', @user.bio %></span>
+    </div>
+  </div>
+</div>

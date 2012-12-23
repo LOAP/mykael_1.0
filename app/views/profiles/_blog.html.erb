@@ -1,0 +1,35 @@
+<div id="nav-dashboard_nav_blog">
+    <div class="blog_content">
+      <% if can? :update, @profile %>
+          <div class="profile_posts_container">
+            <!-- POSTS LIST   -->
+            <% if @user.posts.each do %>
+            <% end.empty? %>
+                <h3>Post to share your thoughts and ideas.</h3>
+            <% else %>
+                <%= render @user.posts %>
+            <% end %>
+         </div>
+          <!-- POSTS CREATE   -->
+            <div class="post_form">
+              <h2>Add a Post:</h2>
+              <%= render "posts/form2" %>
+            </div>
+            <% else %>
+          <div class="profile_posts_container_visitor">
+            <!-- VISITOR POSTS LIST   -->
+            <% if @user.posts.each do %>
+            <% end.empty? %>
+                <h3><%= @user.name %> has not made a post.</h3>
+            <% else %>
+                <%= render @user.posts %>
+            <% end %>
+            <% end %>
+          </div>
+    </div>
+</div>
+<script>
+    $('#addbuzz').click(function () {
+        $("#buzz_form").slideToggle('slow');
+    });
+</script>

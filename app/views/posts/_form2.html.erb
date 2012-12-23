@@ -1,0 +1,13 @@
+<%= form_for([@user, @user.posts.build]) do |f| %>
+    <div class="field">
+      Title: Max 100 characters<br />
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      Post: Max 300 characters<br />
+      <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

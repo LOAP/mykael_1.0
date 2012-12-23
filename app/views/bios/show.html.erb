@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @bio.user.name.upcase %>'s biography.</h2>
+<div class="bio_container">
+<p>
+  <%= simple_format @bio.content %>
+</p>
+  <% if can? :update, @bio %>
+  <%= link_to 'Edit', edit_bio_path(@bio) %> |
+  <% end %>
+  <strong><p><%= link_to 'Back', :back %></p></strong>
+</div>

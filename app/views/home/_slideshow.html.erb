@@ -1,0 +1,36 @@
+<div class= "slide_show_container">
+  <div class="slide_show">
+    <div class="slide">
+      <div class="fadein">
+        <img src= <%= asset_path "IMG_8795.JPG"%> >
+
+      </div>
+    </div>
+    <div class="social_media_container">
+
+      <div class="twitter_home">
+        <a href="https://twitter.com/LOAPorg" class="twitter-follow-button" data-show-count="false">Follow @LOAPorg</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <div class="like_bar">
+      <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/pages/LivingOnAPrayerorg/347921305253374"
+              scrolling="no" frameborder="0"
+              style="border:none; width:450px; height:80px">
+      </iframe>
+     </div>
+    </div>
+    <div class="join_button">
+      <button class= "btn-large btn-primary"><%= link_to "CREATE YOUR FREE ACCOUNT", new_user_registration_path, class: "join" %></button>
+    </div>
+  </div>
+</div>
+<script>
+    $(function(){
+        $('.fadein img:gt(0)').hide();
+        setInterval(function(){
+                    $('.fadein :first-child').fadeOut()
+                            .next('img').fadeIn()
+                            .end().appendTo('.fadein');},
+                5000);
+    });
+</script>

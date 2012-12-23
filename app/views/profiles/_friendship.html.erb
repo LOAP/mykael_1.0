@@ -1,0 +1,30 @@
+<div id="nav-dashboard_nav_friend" style="display:none;">
+  <div class="find_friend_profile" >
+    <% if can? :update, @profile %>
+        <div class="find_friend_profile_button_container">
+         <button type="button"class="btn btn-link "><strong><%= link_to "Find Friends", friendships_path %></strong></button>
+        </div>
+    <% end %>
+  </div>
+  <div id="nav-dashboard_nav_friended_by" style="text-align: center;">
+    <h5><%= @user.name.upcase %> was Friended by:</h5>
+    <ul>
+      <% for user in @user.inverse_friends %>
+          <li><%= link_to "#{user.name.upcase}", user.profile %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div id="nav-dashboard_nav_friended"style="text-align: center;">
+    <h5><%= @user.name.upcase %> has Friended:</h5>
+    <ul>
+      <% for friendship in @user.friendships %>
+          <li>
+            <%= link_to "#{friendship.friend.name.upcase}", friendship.friend.profile %>
+            <% if can? :update, @profile %>
+                (<%= link_to "remove", friendship, :method => :delete %>)
+            <% end %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

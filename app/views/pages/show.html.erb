@@ -1,0 +1,7 @@
+<h1><%= @page.name %></h1>
+<%= simple_format @page.content %>
+ <% if can? :update, @page %>
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<% end %>
+<br /><br />
+<strong><p><%= link_to 'Back To Home Page', root_path %></p></strong>

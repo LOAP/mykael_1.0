@@ -1,0 +1,82 @@
+<!-- PROFILE   -->
+<h4><%= link_to 'Back', :back %></h4>
+<!--  PROFILE BANNER    -->
+<%= render 'profiles/banner' %>
+<!--  END    -->
+<div class="dashboard_home_container">
+  <div class="dashboard_home_content">
+    <div class="dashboard_home_overview">
+        <!--  PROFILE IMAGE    -->
+        <%= render 'profiles/image' %>
+        <!--  END    -->
+        <!--  PROFILE USER PUBLIC INFO & SETTINGS    -->
+        <%= render 'profiles/settings' %>
+        <!--  END    -->
+      <div style="padding-top: 0px;">
+        <div class="dashboard_home_updates">
+          <label class="radio_check" ><input id="rdb1" type="radio" name="toggler" value="dashboard_nav_blog" />My Blog</label>
+        </div>
+        <div class="dashboard_home_mentors">
+          <label class="radio_check"><input id="rdb2" type="radio" name="toggler" value="dashboard_nav_friend" />My Friends</label>
+        </div>
+        <div class="dashboard_home_groups">
+          <label class="radio_check"><input id="rdb4" type="radio" name="toggler" value="dashboard_nav_groups" />My Groups</label>
+        </div>
+        <div class="dashboard_home_myhives">
+          <label class="radio_check"><input id="rdb3" type="radio" name="toggler" value="dashboard_nav_my_hives" />My ?'s</label>
+        </div>
+        <div class="dashboard_home_store">
+          <label class="radio_check"><input id="rdb5" type="radio" name="toggler" value="dashboard_nav_my_store" />My ?'s</label>
+        </div>
+        <!--   ADD/EDIT IMAGE       -->
+        <% if can? :update, @profile %>
+            <div style="width: 300px;margin-left:100px;"><button id="editme"class="btn btn-link">Add/Edit Image</button></div>
+            <div id="edit_profile_name" style="display: none;margin-left:30px;">
+            <%= simple_form_for @profile, :html => { :multipart => true } do |f| %>
+                <%= f.error_notification %>
+                <div class="form-inputs">
+                  <%= f.input :image, :label => 'Choose a file then click Update Profile to save the changes.' %><br />
+                  <strong>or copy & paste a URL below and click Update Profile</strong><br />
+                  <%= f.text_field :remote_image_url %><br /><br />
+                  <%= f.button :submit %>
+                </div>
+            <% end %>
+        <% end %>
+        </div>
+        <script>
+            $('#editme').click(function () {
+                $("#edit_profile_name").slideToggle('slow');
+            });
+        </script>
+      </div>
+    </div>
+    <div class="dashboard_home_global_nav_container">
+      <!--    BLOG              -->
+       <%= render 'profiles/blog' %>
+      <!--  END    -->
+      <!--      PROFILE HIVE           -->
+       <%= render 'profiles/hives' %>
+      <!--  END    -->
+      <!--   FRIENDSHIPS            -->
+       <%= render 'profiles/friendship' %>
+      <!--  END    -->
+      <!--  GROUPS           -->
+       <%= render 'profiles/groups' %>
+      <!--  END    -->
+      <!--  STORE           -->
+       <%= render 'profiles/store' %>
+      <!--  END    -->
+    </div>
+  </div>
+</div>
+<script>
+    $(function() {
+        $("[name=toggler]").each(function(i) {
+            $(this).change(function(){
+                $('#nav-dashboard_nav_blog, #nav-dashboard_nav_friend, #nav-dashboard_nav_my_hives, #nav-dashboard_nav_my_store, #nav-dashboard_nav_groups, #form-difference').hide();
+                divId = 'nav-' + $(this).val();
+                $("#"+divId).show();
+            });
+        });
+    });
+</script>

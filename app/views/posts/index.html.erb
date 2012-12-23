@@ -1,0 +1,26 @@
+<div id="post_index_container">
+  <div id="post_index_title">
+    <p style="font-size: 30px;">The Blog <span style="font-size: 12px;"> <%= link_to 'Add to the Blog', new_user_registration_path %></span></p>
+  </div>
+  <div id="post_index">
+    <% @posts.each do |post| %>
+        <div class="post_index_title">
+          <span style="font-size: 23px;color: #808080;"><%= post.title %></span>
+        </div>
+        <div class="post_index_content2">
+          <span style="font-size: 17px;color: #808080;"><%= post.content %> <span style="font-size: 12px; color: black;">
+            <br /><br /></span></span>
+          <div class="posted_by_container">
+             <div class="posted_by_image">
+               <%= image_tag post.user.profile.image %>
+             </div>
+          </div>
+          <div class="posted_by">
+            Posted by: <%= link_to "#{post.user.name.upcase}", post.user.profile %> on: <%= post.created_at.strftime("%m/%d/%Y") %>
+          </div>
+        </div>
+        <br />
+    <% end %>
+    <%= will_paginate @posts %>
+  </div>
+</div>

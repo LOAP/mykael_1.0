@@ -1,0 +1,563 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+img {
+  height:100%;
+  width:100%;
+}
+
+
+/*     BANNER    */
+
+div .dashboard_home_banner_container{
+  width: 100%;
+  height: auto;
+  padding-bottom: 0px;
+  background: red;
+  background: transparent;
+  display: block;
+  vertical-align: baseline;
+
+}
+
+div .dashboard_home_banner_content{
+  width: 950px;
+  height: auto;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  background-color: brown;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .dashboard_home_banner{
+  width: 950px;
+  height: auto;
+  float: left;
+  padding-top: 30px;
+  background-color: #f5deb3;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+/*  END    */
+
+div .dashboard_title{
+  width: 940px;
+  height: auto;
+  float: left;
+  background-color: orange;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .dashboard_text{
+  width: auto;
+  height: 60px;
+  float: left;
+  background-color: blue;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .dashboard_username{
+  width: auto;
+  height: auto;
+  float: left;
+  margin-left: 4px;
+  padding-top: 13px;
+  background-color: #e6e6fa;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .dashboard_username_edit_links{
+  width: auto;
+  height: auto;
+  float: left;
+  padding-top: 39px;
+  margin-left: 10px;
+  background-color: red;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+
+
+
+div .dashboard_home_container {
+  width: 950px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 0px;
+  background-color: green;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .dashboard_home_content {
+  width: 950px;
+  height: auto;
+  margin-left: 0px;
+  float: left;
+  background-color: #ff0000;
+  background-color: transparent;
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.9;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .dashboard_home_overview {
+  width: 950px;
+  height: auto;
+  float: left;
+  margin-top: 20px;
+  background-color: orange;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                /*    PROFILE IMAGE     */
+div .dashboard_home_profile_image{
+  width: 300px;
+  height: 250px;
+  float: left;
+  margin-left: 25px;
+  background-color: #add8e6;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_no_profile_image{
+  width: 300px;
+  height: 100px;
+  float: left;
+  margin-top: 110px;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                    /*       BUTTONS              */
+div .dashboard_home_groups {
+  width: 100px;
+  height: 25px;
+  float: left;
+  background-color: #d3d3d3;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_groups:hover{
+  background-color: #87ceeb;
+}
+div .dashboard_home_myhives {
+  width: 100px;
+  height: 25px;
+  float: left;
+  background-color: #d3d3d3;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_myhives:hover{
+  background-color: #87ceeb;
+}
+div .dashboard_home_stats_container {
+  width: 50px;
+  height: 55px;
+  float: left;
+  background-color: blue;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_updates {
+  width: 100px;
+  height: 25px;
+  float: left;
+  background-color: #d3d3d3;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_updates:hover{
+  background-color: #87ceeb;
+}
+div .dashboard_home_mentors{
+  width: 100px;
+  height: 25px;
+  float: left;
+  background-color: #d3d3d3;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_mentors:hover{
+  background-color: #87ceeb;
+}
+div .dashboard_home_store{
+  width: 100px;
+  height: 25px;
+  float: left;
+  background-color: #d3d3d3;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_store:hover{
+  background-color: #87ceeb;
+}
+                                                                                      /*   END BUTTONS   */
+
+                                                                                    /*   SETTINGS & INFO   */
+div .dashboard_home_settings_container {
+  width: 600px;
+  height: 225px;
+  float: left;
+  background-color: #da70d6;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_settings_container_rt_column{
+  width: 150px;
+  height: 200px;
+  float: right;
+  background-color: green;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_settings_container_lt_column{
+  width: 450px;
+  height: 200px;
+  float: left;
+  background-color: #9370db;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_created_by{
+  width: 400px;
+  height: 20px;
+  float: left;
+  background-color: #ffc0cb;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_created_on{
+  width: 400px;
+  height: 20px;
+  float: left;
+  background-color: #a52a2a;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_location_ip{
+  width: 400px;
+  height: 20px;
+  float: left;
+  background-color: #db7093;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_bio_truncate{
+  width: 390px;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: auto;
+  float: left;
+  background-color: #db7093;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_settings_view_profile{
+  width: auto;
+  height: 20px;
+  float: left;
+  background-color: #ffc0cb;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_settings_private{
+  width: auto;
+  height: 30px;
+  float: left;
+  background-color: #00ff7f;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .dashboard_home_account_settings{
+  width: auto;
+  height: 20px;
+  float: left;
+  background-color: #7fffd4;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                  /*    GLOBAL NAV    */
+div .dashboard_home_global_nav_container {
+  width: 900px;
+  height: auto;
+  float: left;
+  margin-left: 25px;
+  margin-top:25px;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                        /*    BLOG    */
+div #nav-dashboard_nav_blog {
+  width: 900px;
+  height: auto;
+  float: left;
+  background-color: transparent;
+  display: none;
+  vertical-align: baseline;
+}
+div .blog_content {
+  width: 900px;
+  height: auto;
+  float: left;
+  margin-left: 0px;
+  background-color: red;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .profile_posts_container {
+  width: 550px;
+  height: auto;
+  float: right;
+  margin-left: 0px;
+  background-color: green;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .post_control {
+  width: 550px;
+  height: auto;
+  float: right;
+  margin-left: 0px;
+  background-color: pink;
+  background-color: ransparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .profile_posts_container_visitor {
+  width: 550px;
+  height: auto;
+  float: left;
+  margin-left: 0px;
+  background-color: red;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .post_form {
+  height: auto;
+  float: left;
+  background-color: red;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                      /*    HIVES    */
+div #nav-dashboard_nav_my_hives {
+  width: 900px;
+  height: auto;
+  float: left;
+  background-color:transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div #hive_form{
+  display: none;
+  text-align: center;
+  margin-bottom: 20px;
+  moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+}
+                                                                                        /*    FRIENDS    */
+div .find_friend_profile{
+   width: 900px;
+   height: auto;
+   float: left;
+   background-color: transparent;
+   display: block;
+   vertical-align: baseline;
+ }
+div .find_friend_profile_button_container{
+  width: auto;
+  height: auto;
+  text-align: center;
+
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div #nav-dashboard_nav_friend {
+  width: 900px;
+  height: auto;
+  float: left;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div #nav-dashboard_nav_friended_by {
+  width: 425px;
+  height: auto;
+  float: left;
+  margin-left: 25px;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div #nav-dashboard_nav_friended {
+  width: 450px;
+  height: auto;
+  float: left;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                      /*    GROUPS    */
+div #nav-dashboard_nav_groups {
+  width: 900px;
+  height: auto;
+  float: left;
+  background-color: pink;
+  display: block;
+  vertical-align: baseline;
+}
+                                                                                          /*    STORE    */
+div #nav-dashboard_nav_my_store {
+  width: 900px;
+  height: auto;
+  float: left;
+  background-color: #add8e6;
+  display: block;
+  vertical-align: baseline;
+}
+/*    Hive Thumbnail          */
+
+
+
+
+div .hive_thumbnails_container{
+  width: 900px;
+  height: auto;
+  margin: auto;
+  background-color: red;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .hive_thumbnail_banner{
+  width: 900px;
+  height: auto;
+  margin: auto;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .hive_thumbnail_container{
+  height: 320px;
+  width: 250px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+}
+
+div .hive_thumb_map{
+  height: 175px;
+  width: 250px;
+  margin-bottom: 10px;
+  float: left;
+  background-color: #add8e6;
+}
+
+div .hive_thumb_name{
+  height: 30px;
+  width: 250px;
+  margin-left: 5px;
+  float: left;
+  background-color: transparent;
+}
+
+div .profile_thumb_bio{
+  height: 60px;
+  width: 250px;
+  margin-left: 5px;
+  float: left;
+  background-color: transparent;
+}
+
+div .hive_thumb_contact{
+  height: 30px;
+  width: 250px;
+  margin-left: 5px;
+  float: left;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .hive_thumb_description{
+  height: 40px;
+  width: 250px;
+  margin-left: 5px;
+  float: left;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+div .hive_thumb_info_link{
+  height: 30px;
+  width: 250px;
+  text-align: center;
+  float: left;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+
+div .profile_thumbnail_no_image{
+  width: 250px;
+  height: 20px;
+  float: left;
+  margin-top: 70px;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+
+

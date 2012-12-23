@@ -1,0 +1,16 @@
+<div id="nav-dashboard_nav_my_hives">
+   <% if can? :update, @profile %>
+  <div style="text-align: center;">
+     <button type="button" id="addhive"class="btn btn-info">Register Your Hive</button>
+  </div>
+  <% end %>
+  <div id="hive_form">
+       <%= @user.friends.map(&:created_at) %>
+
+  </div>
+  <script>
+      $('#addhive').click(function () {
+          $("#hive_form").slideToggle('slow');
+      });
+  </script>
+</div>

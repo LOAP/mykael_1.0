@@ -1,0 +1,9 @@
+<div class="dashboard_home_profile_image" style="text-align: center;">
+  <% if @profile.image? %>
+  <%= image_tag @profile.image_url.to_s %>
+  <% else %>
+  <div class="dashboard_home_no_profile_image" style="text-align: center;">
+     <strong>No image for <%= @user.name.capitalize %></strong>
+   </div>
+  <% end %>
+</div>

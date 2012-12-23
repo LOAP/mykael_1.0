@@ -1,0 +1,11 @@
+<div class="update_title">
+  <span style="font-size: 23px;color: #808080;"><%= post.title %></span>
+</div>
+<div class="update_content">
+  <span style="font-size: 17px;color: #808080;"><%= post.content %>
+    <span style="font-size: 12px; color: black;"> <%= post.created_at.strftime("%m/%d/%Y") %>
+     <% if can? :update, @profile %>
+      <%= link_to 'View/Edit', post %> <%= link_to 'Destroy', [post.user, post], :confirm => 'Are you Sure?', :method => :delete %></span></span>
+     <% end %>
+</div>
+<br />
