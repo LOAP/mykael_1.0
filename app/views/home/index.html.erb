@@ -1,5 +1,14 @@
-<div class= "front_page_container">
-  <div class="front_page"></div>
+<div id="front_page_wrap" class="clearfix">
+    <div class="front_page">
+    </div>
+    <div class="thoughts">
+        <% @recent_posts.each do |post| %>
+          <div>
+            <span style="font-size: 20px;color: white;"><%= post.title %></span> <br />
+            <span style="font-size: 17px;color: white;"><%= post.content %> </span>
+          </div>
+        <% end %>
+    </div>
 </div>
 
 
