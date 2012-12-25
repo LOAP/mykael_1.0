@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  http_basic_authenticate_with :name => "mykael", :password => "password"
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
